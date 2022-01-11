@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <p class = "loginheader">Register For An Account</h1>
+    <hr class = "loginunderline">
+
+    <form action="/register" method="post" class = "loginform">
+        <option disable selected value class = "loginformlabel">Username</option>
+        <input autocomplete="off" autofocus class="loginformtextbox" name="username" placeholder="Username" type="text">
+
+        <option disable selected value class = "loginformlabel">Password</option>
+        <input class="loginformtextbox" name="password" placeholder="Password" type="password">
+
+        <option disable selected value class = "loginformlabel">Confirm Password</option>
+        <input class="loginformtextbox" name="confirmation" placeholder="Confirm Password" type="password">
+        <button class="loginformbutton" type="submit">Register</button>
+    </form>
+
+{% endblock %}

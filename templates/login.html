@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block main %}
+    <p class = "loginheader">Login</h1>
+    <hr class = "loginunderline">
+
+    <form action="/login" method="post" class = "loginform">
+        <option disable selected value class = "loginformlabel">Username</option>
+
+        <input class = "loginformtextbox" autocomplete="off" autofocus name="username" placeholder="Enter Username" type="text">
+
+        <option disable selected value class = "loginformlabel">Password</option>
+        <input class = "loginformtextbox" name="password" placeholder="Enter Password" type="password">
+
+        <button type="submit" class = "loginformbutton">Login</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Movies
+{% endblock %}
+
+{% block main %}
+    <p class = "surveyheader">Movie Recommendations</h1>
+    <hr class = "surveyunderline">
+
+    <p class = "movieoption">Here are some movie suggestions for you:</p>
+    {% for recommendation in recommendation_list %}
+        <p class = "movieoption"> <i>{{ recommendation.title }}</i> — {{ recommendation.director }}, {{ recommendation.year }}</p>
+    {% endfor %}
+
+    <form action="/" method="post">
+        <option hidden name="addmovies" value="yes"></option>
+        <button type="submit" class="movieadd">Add Movies To My List</button>
+    </form>
+
+{% endblock %}

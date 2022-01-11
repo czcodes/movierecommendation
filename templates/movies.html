@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Movies
+{% endblock %}
+
+{% block main %}
+    <p class = "surveyheader">Movie Recommender</h1>
+    <hr class = "surveyunderline">
+
+    <img src = "static/movieheader.jpg" class = "surveyimage">
+
+    <p class = "surveyintroduction">Please fill in all of the following information:</p>
+    <form action="/movies" method="post" class = "surveyform">
+        <option disable selected value class = "surveytext">Enter your age below: </option>
+
+        <input class="surveytextbox" name="age" placeholder="Age" type="number" min="1">
+
+        <option disable selected value class = "surveytext">Would you consider yourself to be more analytical or artistic?</option>
+        <select name="artistic" class = "surveytextbox">
+            <option selected="true" style='display: none'></option>
+            <option value="No">Analytical</option>
+            <option value="Yes">Artistic</option>
+            <option value="Both">I'm a bit of both</option>
+        </select>
+
+        <option disable selected value class = "surveytext">Are you interested in films not in the English language?</option>
+
+        <select name="foreign" class = "surveytextbox">
+            <option selected="true" style='display: none'></option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <option disable selected value class = "surveytext">Do you prefer shorter or longer movies?</option>
+
+        <select name="runtime" class = "surveytextbox">
+            <option selected="true" style='display: none'></option>
+            <option value="shorter">Shorter</option>
+            <option value="longer">Longer</option>
+            <option value="ambivalent">Doesn't Matter</option>
+        </select>
+
+        <option disable selected value class = "surveytext">Select one of your favorite genres from the list below:</option>
+
+        <select name="genre1" class = "surveytextbox">
+            <option selected="true" style='display: none'></option>
+            <option value="Action">Action</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Crime">Crime</option>
+            <option value="Drama">Drama</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Historical">Historical</option>
+            <option value="Horror">Horror</option>
+            <option value="Musical">Musical</option>
+            <option value="Mystery">Mystery</option>
+            <option value="Romance">Romance</option>
+            <option value="Sci-fi">Sci-Fi</option>
+            <option value="Teen">Teen</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Tragedy">Tragedy</option>
+            <option value="Western">Western</option>
+        </select>
+
+        <option disable selected value class = "surveytext">Select another of your favorite genres from the list below:</option>
+
+        <select name="genre2" class = "surveytextbox">
+            <option selected="true" style='display: none'></option>
+            <option value="Action">Action</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Crime">Crime</option>
+            <option value="Drama">Drama</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Historical">Historical</option>
+            <option value="Horror">Horror</option>
+            <option value="Musical">Musical</option>
+            <option value="Mystery">Mystery</option>
+            <option value="Romance">Romance</option>
+            <option value="Sci-fi">Sci-Fi</option>
+            <option value="Teen">Teen</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Tragedy">Tragedy</option>
+            <option value="Western">Western</option>
+        </select>
+
+        <option disable selected value class = "surveytext">Select a final genre from the list below:</option>
+
+        <select name="genre3" class = "surveytextbox">
+            <option selected="true" style='display: none'></option>
+            <option value="Action">Action</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Crime">Crime</option>
+            <option value="Drama">Drama</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Historical">Historical</option>
+            <option value="Horror">Horror</option>
+            <option value="Musical">Musical</option>
+            <option value="Mystery">Mystery</option>
+            <option value="Romance">Romance</option>
+            <option value="Sci-fi">Sci-Fi</option>
+            <option value="Teen">Teen</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Tragedy">Tragedy</option>
+            <option value="Western">Western</option>
+        </select>
+        <br>
+        <button type="submit" class = "surveybutton">Submit</button>
+    </form>
+{% endblock %}

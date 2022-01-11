@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name = "viewport" content = "initial-scale=1, width=device-width">
+
+        <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Crimson+Text&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Muli:700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Serif:700&display=swap" rel="stylesheet">
+
+
+        <!--Website icon TBD-->
+
+
+        <link href="/static/styles.css" rel="stylesheet">
+
+        <title>Movie Suggestions From A Nerd: {% block title %}{% endblock %}</title>
+
+    </head>
+
+    <body>
+        <div class="navbar">
+            {% if session.user_id %}
+                <a href="/logout">Logout</a>
+                <a href="/">Profile</a>
+                <a href="/movies">Movies</a>
+
+                <div class="logo">
+                    <a href="/">Movie Suggestions From A Nerd</a>
+                </div>
+
+            {% else %}
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+
+                <div class="logo">
+                    <a href="/">Movie Suggestions From A Nerd</a>
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="space">
+            testwords
+        </div>
+        {% block main %}{% endblock %}
+
+    </body>
+</html>
